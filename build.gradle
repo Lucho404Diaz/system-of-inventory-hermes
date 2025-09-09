@@ -1,6 +1,5 @@
 // --------------------------------------------------
 // ARCHIVO: build.gradle
-// UBICACIÓN: Raíz del monorepo (VERSIÓN CORREGIDA)
 // --------------------------------------------------
 
 plugins {
@@ -8,30 +7,23 @@ plugins {
     id 'io.quarkus' apply false
 }
 
-// Configuración que se aplicará a TODOS los proyectos (raíz y submódulos)
-allprojects {
-    group = 'co.lucho404diaz.hermes'
-    version = '1.0.0'
-
-    // ESTA ES LA PARTE CLAVE:
-    // Aseguramos que TODOS los módulos sepan dónde buscar las dependencias.
-    repositories {
-        mavenCentral()
-    }
-}
-
-// Configuración que se aplicará SOLO a los submódulos
 subprojects {
     apply plugin: 'java'
     apply plugin: 'io.quarkus'
 
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    }
+
+    group = 'co.lucho404diaz.hermes'
+    version = '1.0.0'
+
     java {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
-    }
-
-    // Aplicamos la plataforma de Quarkus (BOM) a cada submódulo
-    dependencies {
-        implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     }
 }

@@ -12,11 +12,8 @@ pluginManagement {
     }
 }
 
-// Le da el nombre al proyecto principal
 rootProject.name = 'system-of-inventory-hermes'
 
-// Registra cada una de tus lambdas como un módulo del proyecto
-// include 'common-libs'
 include 'order-service-function'
 include 'stock-service-function'
 include 'pos-service-function'

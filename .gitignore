@@ -25,7 +25,7 @@ gradle-wrapper.jar
 
 # Archivos generados por el Wrapper de Gradle
 !gradle-wrapper.properties
-
+.quarkus/
 # Archivos del IDE (IntelliJ, VSCode, Eclipse)
 .idea/
 .vscode/

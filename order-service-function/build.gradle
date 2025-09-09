@@ -9,18 +9,11 @@ plugins {
 dependencies {
     // ---- Capa de API Reactiva ----
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
-
     // ---- Capa de Persistencia Reactiva ----
     implementation("io.quarkus:quarkus-hibernate-reactive-panache")
-    implementation("io.quarkus:quarkus-reactive-h2-client")
-
-
+    implementation("io.quarkus:quarkus-jdbc-h2")
     // --- Utilidades Adicionales ---
     implementation("io.quarkus:quarkus-arc")
-
-    // Si creaste 'common-libs', lo añades como dependencia así:
-    // implementation(project(':common-libs'))
-
     // --- Dependencias de Test ---
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
