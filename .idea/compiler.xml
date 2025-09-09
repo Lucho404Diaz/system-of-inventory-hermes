@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-panache-common/3.2.2.Final/6a4be777e9e389b6c7bed50aadc683fd42164ded/quarkus-panache-common-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-arc/3.2.2.Final/900ef1194ea53f11b3ace2de82bd7b1ba3a19165/quarkus-arc-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-core/3.2.2.Final/a448f78c17cf3432a07b76eb448fe25275c624f1/quarkus-core-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus.arc/arc/3.2.2.Final/9fbc56975e71f27ce9bd583464cf94e0fe1eae56/arc-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1/2012f388c6de83e29101cbf82c3ed2bd37931c64/jakarta.enterprise.cdi-api-4.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/2.1.1/48b9bda22b091b1f48b13af03fe36db3be6e1ae3/jakarta.annotation-api-2.1.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.inject/jakarta.inject-api/2.0.1/4c28afe1991a941d7702fe1362c365f0a8641d1e/jakarta.inject-api-2.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-os/2.1.0/abac536289c32d1d32417e610cb0d7de44220b2a/smallrye-common-os-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-ide-launcher/3.2.2.Final/72ab3a9ebaa66cfcfc8075ade453c82184684546/quarkus-ide-launcher-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-development-mode-spi/3.2.2.Final/d44d408d836d2559667231d01bdf6217cce352b8/quarkus-development-mode-spi-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.config/smallrye-config/3.3.2/112a19534dc2cac5880d9813b16fbec378b08cbd/smallrye-config-3.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.threads/jboss-threads/3.5.0.Final/dd23d4788b3eafe9597ef3fe028e46ceb293ba8d/jboss-threads-3.5.0.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-bootstrap-runner/3.2.2.Final/f52ae21027a852b06e7ce85ce96190c99cafec25/quarkus-bootstrap-runner-3.2.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.config/smallrye-config-core/3.3.2/bad51343a02e460348d1a289bdbe861267701f8/smallrye-config-core-3.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-expression/2.1.0/25bff875280213421cba8ecf55b256cc07798d68/smallrye-common-expression-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-function/2.1.0/5ab3cb79288038750b68d61d7c667f4f89ee4907/smallrye-common-function-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-constraint/2.1.0/1e630cde594b2ce693ba98320c0119d5f05dd564/smallrye-common-constraint-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.config/smallrye-config-common/3.3.2/580d715e49470a934f91fb6d5a301119f8efe94d/smallrye-config-common-3.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.5.1.Final/a5c340a92c6efeaa0d495047ee9aab38a86bb107/jboss-logging-3.5.1.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logmanager/jboss-logmanager-embedded/1.1.1/98f70b5915962c4af7f41b468928a3b47c15a4b9/jboss-logmanager-embedded-1.1.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging-annotations/2.2.1.Final/ee3db82d956ee22c4f1f2df9c611e048e79a4a43/jboss-logging-annotations-2.2.1.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.6/88c40d8b4f33326f19a7d3c0aaf2c7e8721d4953/slf4j-api-2.0.6.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.slf4j/slf4j-jboss-logmanager/2.0.0.Final/accb024e15025215cb5ef8c8f41ce5b684fddbf0/slf4j-jboss-logmanager-2.0.0.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.sdk/graal-sdk/22.3.2/da89e202c86ee7a58afa01e165d32bdd2114e769/graal-sdk-22.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wildfly.common/wildfly-common/1.5.4.Final-format-001/d600b29d51306b30b29e7de64f6fedf61beb1808/wildfly-common-1.5.4.Final-format-001.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-fs-util/0.0.9/af43a8b4da2a2c9119e5280929887445847597a0/quarkus-fs-util-0.0.9.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.microprofile.context-propagation/microprofile-context-propagation-api/1.3/aab6a415754137629e725a9927702a5cd68038c2/microprofile-context-propagation-api-1.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.enterprise/jakarta.enterprise.lang-model/4.0.1/2b195781faad31c1724d8122136909c34c3ae79e/jakarta.enterprise.lang-model-4.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.el/jakarta.el-api/5.0.0/2a22b304920f43d6427cdefb5ce5f6726e2a63a3/jakarta.el-api-5.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.interceptor/jakarta.interceptor-api/2.1.0/1d06a662708601400af4556577ee514c4ad01549/jakarta.interceptor-api-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-io/2.1.0/a689396bd33be0d6622a219f0e31a7bdf80a937c/smallrye-common-io-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.crac/org-crac/0.1.3/78ca3679ec8ff707c18b17885ef589467780c486/org-crac-0.1.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.transaction/jakarta.transaction-api/2.0.1/51a520e3fae406abb84e2e1148e6746ce3f80a1a/jakarta.transaction-api-2.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.reactive/mutiny/2.2.0/5b528a9e7f765330fb6f4f7fbfcb4be56bb0b3fd/mutiny-2.2.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.microprofile.config/microprofile-config-api/3.0.2/9ce9510535480727f16ab762b733f4e5edacc6cf/microprofile-config-api-3.0.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-annotation/2.1.0/8e62a28240a52ac80d737262446a4d62de70bd65/smallrye-common-annotation-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-classloader/2.1.0/82d35cf67ad912e4c2b9d46b207dc44cf6c4fb01/smallrye-common-classloader-2.1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.5/dc6ea1875f4d64fbc85e1691c95b96a3d8569c90/asm-9.5.jar" />
+        </processorPath>
+        <module name="system-of-inventory-hermes.order-service-function.main" />
+        <module name="system-of-inventory-hermes.stock-service-function.main" />
+        <module name="system-of-inventory-hermes.pos-service-function.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="21">
+      <module name="system-of-inventory-hermes.integrationTest" target="23" />
+      <module name="system-of-inventory-hermes.native-test" target="23" />
+      <module name="system-of-inventory-hermes.quarkus-generated-sources" target="23" />
+      <module name="system-of-inventory-hermes.quarkus-test-generated-sources" target="23" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
