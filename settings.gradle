@@ -2,7 +2,6 @@
 // ARCHIVO: settings.gradle
 // --------------------------------------------------
 
-// Define la versión del plugin de Quarkus para todo el proyecto
 pluginManagement {
     repositories {
         mavenCentral()
