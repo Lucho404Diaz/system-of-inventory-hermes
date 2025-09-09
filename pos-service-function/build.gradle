@@ -11,12 +11,15 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     // ---- Capa de Persistencia Reactiva ----
     implementation("io.quarkus:quarkus-hibernate-reactive-panache")
-    implementation("io.quarkus:quarkus-jdbc-postgresql")
+    // Dependencia correcta para la conexión reactiva de PostgreSQL
+    implementation("io.quarkus:quarkus-reactive-pg-client")
+    // Dependencia para transacciones reactivas.
+    implementation("io.quarkus:quarkus-hibernate-reactive")
     // --- Utilidades Adicionales ---
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-smallrye-health")
     implementation("io.quarkus:quarkus-agroal")
-    // --- Dependencias de Test ---
+    // --- Dependencias de Test ----
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }

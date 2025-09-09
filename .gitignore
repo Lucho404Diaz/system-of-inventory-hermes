@@ -59,3 +59,5 @@ dist-custom/
 
 # Ignorar datos persistentes de servicios en Docker
 .docker/*/data/
+!/.docker/database/
+/.docker/database/postgres/data/

@@ -11,11 +11,34 @@ YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
 NC='\033[0m' # Sin Color
 
+kill_services() {
+    echo -e "\n${YELLOW}Buscando servicios de Hermes en los puertos 8081, 8082, 8083...${NC}"
+
+    # Array de puertos a verificar
+    PORTS=(8081 8082 8083)
+
+    for port in "${PORTS[@]}"; do
+        # lsof -ti :$port busca el PID del proceso en el puerto especificado
+        PID=$(lsof -ti :$port)
+
+        # Si se encontró un PID, se termina el proceso
+        if [ -n "$PID" ]; then
+            echo -e "Proceso encontrado en el puerto ${port} (PID: ${PID}). ${RED}Terminando...${NC}"
+            kill -9 $PID
+        else
+            echo -e "Puerto ${port} está libre."
+        fi
+    done
+
+    echo -e "\n${GREEN}✅ Limpieza completada.${NC}"
+}
+
+
 # --- Función para mostrar el menú y lanzar el servicio ---
 start_service_menu() {
     echo -e "\n${YELLOW}¿Qué deseas iniciar en modo de desarrollo?${NC}"
 
-    options=("stock-service (Puerto 8081)" "order-service (Puerto 8082)" "pos-service (Puerto 8083)" "Iniciar TODO el sistema Hermes" "Salir")
+    options=("stock-service (Puerto 8081)" "order-service (Puerto 8082)" "pos-service (Puerto 8083)" "Iniciar TODO el sistema Hermes" "Solo Detener Servicios" "Salir")
 
     select opt in "${options[@]}"
     do
@@ -50,6 +73,10 @@ start_service_menu() {
                 wait
                 break
                 ;;
+            "Solo Detener Servicios")
+                kill_services
+                break
+                ;;
             "Salir")
                 echo -e "\n${GREEN}Saliendo. ¡Hasta luego!${NC}"
                 break
@@ -76,9 +103,13 @@ echo ""
 
 # Verifica si Docker Compose tuvo éxito
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✅ ¡Entorno listo! La base de datos H2 está corriendo.${NC}"
+    echo -e "${GREEN}✅ ¡Entorno listo! La base de datos corriendo: Postgrest 15.${NC}"
     # --- LÍNEA NUEVA Y CLAVE ---
-    echo -e "   ${CYAN}-> Consola web de H2 disponible en: http://localhost:8181${NC}"
+    echo -e "   ${CYAN}-> Puedes acceder con los siguientes datos de conexión url: jdbc:postgresql://localhost:5432/hermesdb
+           POSTGRES_DB: hermesdb
+           POSTGRES_USER: hermesuser
+           POSTGRES_PASSWORD: hermespassword
+     ${NC}"
     # Si todo salió bien, muestra el menú
     start_service_menu
 else
