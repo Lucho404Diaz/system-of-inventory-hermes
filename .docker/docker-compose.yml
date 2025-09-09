@@ -1,0 +1,19 @@
+version: '3.8'
+
+name: "hermes-system"
+services:
+# -- Data bases --
+  postgres-database:
+    image: postgres:15-alpine
+    container_name: hermes-postgres-database
+    environment:
+      POSTGRES_DB: hermesdb
+      POSTGRES_USER: hermesuser
+      POSTGRES_PASSWORD: hermespassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+
