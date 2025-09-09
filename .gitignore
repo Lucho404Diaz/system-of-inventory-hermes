@@ -56,3 +56,6 @@ dist-custom/
 *.iml
 *.ipr
 *.iws
+
+# Ignorar datos persistentes de servicios en Docker
+.docker/*/data/

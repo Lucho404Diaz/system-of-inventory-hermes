@@ -11,9 +11,11 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     // ---- Capa de Persistencia Reactiva ----
     implementation("io.quarkus:quarkus-hibernate-reactive-panache")
-    implementation("io.quarkus:quarkus-jdbc-h2")
+    implementation("io.quarkus:quarkus-jdbc-postgresql")
     // --- Utilidades Adicionales ---
     implementation("io.quarkus:quarkus-arc")
+    implementation("io.quarkus:quarkus-smallrye-health")
+    implementation("io.quarkus:quarkus-agroal")
     // --- Dependencias de Test ---
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
