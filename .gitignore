@@ -49,3 +49,10 @@ application.local.properties
 node_modules/
 dist/
 dist-custom/
+
+# Archivos del IDE (IntelliJ, VSCode, Eclipse)
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
