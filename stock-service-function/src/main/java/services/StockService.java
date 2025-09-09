@@ -1,6 +1,7 @@
 package services;
 
 import entity.StockItemEntity;
+import io.quarkus.hibernate.reactive.panache.common.WithSession;
 import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -21,6 +22,7 @@ public class StockService {
     }
 
 
+    @WithSession
     public Uni<Integer> getAvailableStock(String productId) {
         return stockItemRepository.find(PRODUCT_QUERY, productId)
                 .firstResult()
