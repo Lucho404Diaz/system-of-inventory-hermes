@@ -30,7 +30,7 @@ public class StockService {
                 .onItem().ifNull().failWith(NotFoundException::new);
     }
 
-
+    @WithSession
     public Uni<StockItemEntity> reserveStock(String productId, int quantity) {
         return stockItemRepository.find(PRODUCT_QUERY, productId)
                 .firstResult()
@@ -46,6 +46,7 @@ public class StockService {
 
     }
 
+    @WithSession
     public Uni<StockItemEntity> confirmSale(String productId, int quantity) {
         return stockItemRepository.find(PRODUCT_QUERY, productId)
                 .firstResult()
@@ -62,6 +63,7 @@ public class StockService {
     }
 
 
+    @WithSession
     public Uni<StockItemEntity> releaseReservation(String productId, int quantity) {
         return stockItemRepository.find(PRODUCT_QUERY, productId)
                 .firstResult()
