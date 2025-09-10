@@ -9,12 +9,15 @@ import org.eclipse.microprofile.health.Liveness;
 
 import io.vertx.mutiny.pgclient.PgPool;
 
+import java.util.logging.Logger;
+
 
 @Liveness
 @ApplicationScoped
 public class StockHealthCheck implements HealthCheck {
 
     private final PgPool client;
+    private final Logger logger = Logger.getLogger(StockHealthCheck.class.getName());
 
     @Inject
     public StockHealthCheck(PgPool client) {
@@ -23,10 +26,8 @@ public class StockHealthCheck implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
-        // Ejecuta una consulta simple para verificar la conectividad de la base de datos.
-        // Se usa el método await() para bloquear y esperar el resultado.
-        // En un contexto de API, es mejor usar la cadena de Mutiny.
         try {
+            logger.info("Verificando conexión a la base de datos de stock...");
             client.query("SELECT 1")
                     .execute()
                     .await().indefinitely();
