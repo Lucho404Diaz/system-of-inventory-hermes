@@ -1,12 +1,13 @@
 package entity;
 
+import io.quarkus.hibernate.reactive.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
 import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "stock_items")
-public class StockItemEntity {
+public class StockItemEntity extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
