@@ -29,7 +29,7 @@ public class StockItemsResource {
     @Path("saludo")
     public Uni<Response> saludoMundo() {
         StockRequest stockRequest = new StockRequest();
-        return Uni.createFrom().item(Response.status(Response.Status.OK).entity(new StandardResponse(200, true, "Mensaje de saludo exitoso", stockRequest)).build());
+        return Uni.createFrom().item(Response.status(Response.Status.OK).entity(new StandardResponse(200, true, "Mensaje de saludo desde STOCK:SERVICE exitoso", stockRequest)).build());
     }
 
     @GET
