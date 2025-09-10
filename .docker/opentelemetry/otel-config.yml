@@ -1,0 +1,38 @@
+# .docker/opentelemetry/otel-config.yml
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+
+exporters:
+  # --- CAMBIO CLAVE ---
+  # Reemplazamos el exportador 'jaeger' por 'otlp'
+  otlp:
+    endpoint: "jaeger:4317" # Apunta al puerto OTLP de Jaeger
+    tls:
+      insecure: true
+
+  debug:
+    verbosity: detailed
+
+service:
+  pipelines:
+    # --- CAMBIO CLAVE ---
+    # Actualizamos el nombre del exportador en todas las pipelines
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, otlp]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug]
+    logs:
+      receivers: [otlp]
+      processors: []
+      exporters: [debug]
