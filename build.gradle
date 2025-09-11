@@ -1,0 +1,29 @@
+// --------------------------------------------------
+// ARCHIVO: build.gradle
+// --------------------------------------------------
+
+plugins {
+    id 'java'
+    id 'io.quarkus' apply false
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.quarkus'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    }
+
+    group = 'co.lucho404diaz.hermes'
+    version = '1.0.0'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+}
