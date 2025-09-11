@@ -16,8 +16,6 @@ NC='\033[0m'
 # --- Variables Globales ---
 OTEL_AGENT_PATH="./.otel/opentelemetry-javaagent.jar"
 
-# --- Funciones Auxiliares ---
-
 # Valida que Docker y el Agente de OTEL existan
 check_prerequisites() {
     echo -e "${BLUE}Verificando prerrequisitos...${NC}"
