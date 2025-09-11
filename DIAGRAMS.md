@@ -50,4 +50,5 @@ Este es el Nivel 3 (Componentes), el "zoom" final. Tomamos una de las piezas del
 Este diagrama sirve como una **plantilla reutilizable** para asegurar que todos los microservicios se construyan de la misma manera, manteniendo el código limpio, organizado y fácil de probar.
 
 
-![Diagrama de Componentes Nv3](diagramaras/HERMES-N3%20-%20Componentes%20Referencia.drawio.svg)
+![Diagrama de Contenedores Nv3](diagramas/HERMES-N3-ComponentesReferencia.drawio.svg)
+
