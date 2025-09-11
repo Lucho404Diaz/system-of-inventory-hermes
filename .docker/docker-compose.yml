@@ -1,8 +1,11 @@
-version: '3.8'
+# ================================================================
+# ARCHIVO: .docker/docker-compose.yml (Versión Simplificada)
+# ================================================================
+# Nota: Las claves 'version' y 'name' son obsoletas y se han eliminado.
 
 name: "hermes-system"
 services:
-# -- Data bases --
+  # --- Base de Datos PostgreSQL ---
   postgres-database:
     image: postgres:15-alpine
     container_name: hermes-postgres-database
@@ -13,7 +16,19 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      # Estandarizamos las rutas para que apunten dentro de la carpeta .docker
       - ./postgres/data:/var/lib/postgresql/data
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./databases/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: unless-stopped
 
+  # --- Jaeger (Ahora recibe datos OTLP directamente) ---
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: hermes-jaeger
+    ports:
+      - "16686:16686" # UI
+      - "4317:4317"   # OTLP gRPC (para trazas)
+      - "4318:4318"   # OTLP HTTP (para logs/métricas)
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    restart: unless-stopped

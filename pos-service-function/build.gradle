@@ -7,16 +7,20 @@ plugins {
 }
 
 dependencies {
-    // ---- Capa de API Reactiva ----
+    // --- API REACTIVA (Servidor y Cliente) ---
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
-    // ---- Capa de Persistencia Reactiva ----
+    implementation("io.quarkus:quarkus-rest-client-reactive-jackson")
+
+    // --- PERSISTENCIA REACTIVA NATIVA CON POSTGRESQL ---
     implementation("io.quarkus:quarkus-hibernate-reactive-panache")
-    implementation("io.quarkus:quarkus-jdbc-postgresql")
-    // --- Utilidades Adicionales ---
+    implementation("io.quarkus:quarkus-reactive-pg-client") // El cliente nativo para Postgres
+
+    // --- UTILIDADES ---
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-smallrye-health")
-    implementation("io.quarkus:quarkus-agroal")
-    // --- Dependencias de Test ---
+    implementation("io.quarkus:quarkus-logging-json")
+
+    // --- TEST ---
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
