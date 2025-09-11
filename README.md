@@ -22,7 +22,7 @@ El proyecto está diseñado para ser levantado con un único script que gestiona
 
 ### 1. Clonar el Repositorio
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/Lucho404Diaz/system-of-inventory-hermes
 cd system-of-inventory-hermes
 ```
 
@@ -50,6 +50,11 @@ El script realizará las siguientes acciones:
 3.  Te presentará un menú interactivo para iniciar uno o todos los microservicios.
 
 ## Arquitectura y Guía de Pruebas
+
+La arquitectura de Hermes fue diseñada siguiendo el **modelo C4** para asegurar la claridad en diferentes niveles de abstracción. Hemos creado un documento que cuenta la historia de esta evolución, explicando el propósito de cada diagrama.
+
+➡️ **[La Historia de Hermes Contada en Diagramas](DIAGRAMS.md)**
+
 
 Para una descripción detallada de la arquitectura, la función de cada servicio y una guía completa con comandos `curl` para probar cada endpoint, por favor consulta nuestro documento de arquitectura:
 
